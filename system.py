@@ -313,9 +313,9 @@ def main():
     ax.set_xlabel('real part')
     ax.set_ylabel('imaginary part')
     ax.set_title('Constellation')
-    # plt.show()
+    plt.show()
     plt.savefig('constellation.png')
-    plt.close()
+    #plt.close()
     # plt.plot(decoded_signal.real)
     # plt.show()
 
