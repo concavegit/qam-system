@@ -99,7 +99,7 @@ def compute_phase(received_signal):
     peak_location = np.abs(fft).argsort()[-1]
     peak_freq = fftfreqs[peak_location] * \
         np.pi / 2 / received_signal.size
-    peak_angle = (np.angle(fft[peak_location])) / 4
+    peak_angle = (np.angle(fft[peak_location]) + np.pi) / 4
     print(fftfreqs[peak_location])
 
     phase = peak_freq * np.arange(received_signal.size) + peak_angle
